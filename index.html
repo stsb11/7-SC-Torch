@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<meta name="description" content="The LED Torch">
+		<meta name="author" content="Marc Scott">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/Bourne.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<a href="http://www.bourne-grammar.lincs.sch.uk"><img src="images/logo.png"></img></a>
+		<a href="https://github.com/MarcScott"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>The LED Torch</h1>
+					<img src="images/torch.gif" width=200>
+				</section>
+
+				<section>
+					<h2>CONTENTS</h2>
+					<ol>
+					<li><a href="#/introduction">Introduction</a></li>
+					<li><a href="#/planning">Planning your project</a></li>
+					<li><a href="#/resistors">Resistors</a></li>
+					<li><a href="#/leds">LEDs</a></li>
+					<li><a href="#/plastics">Plastics</a></li>
+					<li><a href="#/components">Components</a></li>
+					<li><a href="#/drilling">Drilling the PCB</a></li>
+					<li><a href="#/soldering">Soldering the PCB</a></li>
+					<li><a href="#/assembly">Assembling the torch</a></li>
+					<li><a href="#/circuit">Designing the circuit</a></li>
+					<li><a href="#/pcb">Designing the PCB</a></li>
+					<li><a href="#/housing">Designing the housing</a></li>
+					<li><a href="#/portfolio">Writing up your portfolio</a></li>
+					</ol>
+				</section>
+
+				<section id="introduction">
+					<h2>Introduction</h2>
+					<p>In this project you will be making an LED torch.</p>
+					<p>You will be:</p>
+					<ol>
+						<li>Designing a circuit board</li>
+						<li>Designing part of the housing for the torch</li>
+						<li>Soldering your components to the PCB</li>
+						<li>Assemble the torch</li>
+					</ol>
+				</section>
+
+				<section id="planning"> 
+					<section>
+						<h1>Planning your project</h1>
+					</section>
+					<section>
+						<h2>The Plan</h2>
+						<p>To complete this project successfully and to a high enough standard that is acceptable of any good craftsman, you must be wise with your time.</p>
+						<p>You will only have 6 x 1 hour lessons in school, so therefore you are trusted to complete this project in your own time at lunch, at home or both.</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Gantt charts</h2>
+						<p>Gantt charts help you to plan your project and to keep to deadlines.</p>
+						<p>Below is an example Gantt chart. You simple place crosses in the box for each task showing the dates you will be working on it.</p>
+						<img src="images/Gantt_example.png" width=360>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Your own Gantt chart</h2>
+						<a href="documents/Gantt_chart.docx">Download the Gantt chart here</a>
+						<p>You need to fill this in and try and keep to the deadlines you set. It will be useful for you to review your Gantt chart at the end of the project to help evaluate how you managed your time.</p>
+					</section>
+				</section>
+
+				<section id="resistors">
+					<section>
+						<h1>Resistors</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Colour codes</h2>
+						<img src="images/colour_codes.png" width=300>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Colour codes</h2>
+						<p>When reading a resistor, hold it so the three colour bands that are close together are on your left, you now read the bands from left to right.</p>
+						<img src="images/colour_example.png">
+						<p>So therefore this resistor value is 560 ohms + or – 28 (5%) This equals a value between 532 ohms and 588 ohms</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Resistors</h2>
+						<p>Download <a href="documents/Resistors.docx">worksheet</a> and complete it to consolidate your learning on Resistors.</p>
+					</section>
+				</section>
+
+				<section id="leds">
+					<section>
+						<h1>LEDs</h1>
+					</section>
+					<section>
+						<h2>LEDs</h2>
+						<p>LED is an acronym for Light Emitting Diode.</p>
+						<img src="http://rsandas.com/images/LED_Multi_color.jpg">
+						<p>As well as emitting light when current passes through an LED, they only allow current to flow one way.</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>LEDs and Current Flow</h2>
+						<p>Conventional current flows from positive to negative, so we must make sure we place our diodes in a circuit the correct way around. We connect the anode to the positive and the cathode to the negative.</p>
+						<img src="http://www.societyofrobots.com/images/electronics_led_diagram.png" width="450">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>LEDs Worksheet</h2>
+						<p>Download <a href="documents/LEDs.docx">worksheet</a> and complete it to consolidate your learning on LEDs.</p>
+					</section>
+				</section>
+
+				<section id="plastics">
+					<section>
+						<h1>Plastics</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Types of Plastic</h2>
+						<p>There are two types of plastic. You're going to need to do some research on plastics using the Web and any other resources you can find.</p><a href="documents/Plastics.docx">Download and fill in this document on plastics.</a>
+					</section>					
+				</section>
+
+				<section id="components">
+					<section>
+						<h1>Components</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Components task</h2>
+						<p><a href="documents/Components.docx">Download this document</a>You'll need to complete the table provided by finding names, circuit symbols and images of the components used in your project.</p>
+					</section>
+				</section>
+
+				<section id="drilling">
+					<section>
+						<h1>Drilling your PCB</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+							<ol>
+								<li>Clean the PCB and drill the correct size holes.</li>
+								<li>Take pictures for your portfolio</li>
+								<li>Write about what you have achieved at this stage. Explain in detail, label the picture and use keywords correctly.</li>
+							</ol>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/Drilling_the_PCB.mp4"  type='video/mp4'>
+  							<source src="video/Drilling_the_PCB.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+					</section>
+				</section>
+
+				<section id="soldering">
+					<section>
+						<h1>Soldering your PCB</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+						<ol>
+							<li>Select the right components</li>
+							<li>Place them on the board the correct way round</li>
+							<li>Remember that some components have a positive and negative</li>
+							<li>Solder them onto the tracks</li>
+							<li>Take pictures for your portfolio</li>
+							<li>Write about what you have achieved at this stage.  Explain in detail, label the picture and use keywords correctly.</li>
+						</ol>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/Soldering_the_PCB.mp4"  type='video/mp4'>
+  							<source src="video/Soldering_the_PCB.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+					</section>
+				</section>
+
+				<section id="assembly">
+					<section>
+						<h1>Assembling your torch</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+						<ol>
+							<li>Collect all five pieces of acrylic, M3X12 screws, screwdriver, adhesive copper track and tensol glue.</li>
+							<li>Take pictures for your portfolio</li>
+							<li>Write about what you have achieved at this stage.  Explain in detail, label the picture and use keywords correctly.</li>
+						</ol>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/Assembling_the_torch.mp4"  type='video/mp4'>
+  							<source src="video/Assembling_the_torch.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Cleaning and polishing</h2>
+						<ol>
+							<li>When your torch is assembled talk to your teacher about cleaning and polishing the edges, (there is no tutorial for this).</li>
+							<li>Take pictures for your portfolio</li>
+							<li>Write about what you have achieved at this stage.  Explain in detail, label the picture and use keywords correctly.</li>
+						</ol>
+					</section>
+				</section>
+
+				<section id="circuit">
+					<section>
+						<h1>Designing your </br>Circuit </br>in</br> Circuit Wizard</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+							<ol>
+								<li>Using circuit wizard, create a circuit that will switch an LED on and off, using a PTM switch, LED, Resistor and 3V battery.</li>
+								<li>Save in your LED torch directory</li>
+								<li>Print screen it for your portfolio</li>
+								<li>When using this in your portfolio, explain what you did to create it.</li>
+								<li>Write about the different components, where you found them and what they do/how they work</li>
+							</ol>
+							<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/Circuit_design.mp4"  type='video/mp4'>
+  							<source src="video/Circuit_design.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+				</section>
+
+				<section id="pcb">
+					<section>
+						<h1>Designing your PCB </br>in</br> Circuit Wizard</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+						<ol>
+							<li>Using circuit wizard, create a PCB from the circuit you have drawn.</li>
+							<li>Save in your LED torch directory</li>
+							<li>Print screen different views for your portfolio</li>
+							<li>When using this in your portfolio, explain what you did to create it.</li>
+							<li>Write about the ‘artwork’, ‘real life’ and the with/without components tabs.</li>
+						</ol>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/PCB_design.mp4"  type='video/mp4'>
+  							<source src="video/PCB_design.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+				</section>
+
+				<section id="housing">
+					<section>
+						<h1>Designing your </br>Torch Housing</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do.</h2>
+						<ol>
+							<li>Draw the pieces of your torch on 2D design</li>
+							<li>Put your name on the bottom piece</li>
+							<li>Save in your LED torch directory</li>
+							<li>Print screen it for your portfolio</li>
+							<li>When using this in your portfolio, explain what you did to create it.</li>
+							<li>Write about the drawing tools, the delete tools, the grid and the toggle tool.</li>
+						</ol>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Introduction to TechSoft 2D</h2>
+						<video controls preload>
+  							<source src="video/Intro_TS2D.mp4"  type='video/mp4'>
+  							<source src="video/Intro_TS2D.mp4" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<video controls preload>
+  							<source src="video/Housing_design.mp4"  type='video/mp4'>
+  							<source src="video/Housing_Design.mp4" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+					</section>
+				</section>
+
+				<section id="portfolio">
+					<section>
+						<h1>Writing your</br> portfolio</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+						<p>You need to download <a href="documents/Portfolio.docx">this portfolio template</a>. Complete the document as shown in step 1.</p>
+						<h3>Last steps</h3>
+						<ol>
+							<li>Proof read your work, get someone else to proof read your work (an adult that looks after you) work to the ‘green pen’ system.</li>
+							<li>Have it ready to hand in on the deadline set by your teacher at the beginning of the project.</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Extension</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Solidworks</h2>
+						<p>As an extension task, you could have a go at creating a 3D model of your torch in Solid Works. Your teacher will be able to guide you or there is a lunchtime club you can join. Only do this when you have completed all tasks set and are satisfied you have ‘green-penned’ your work.</p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
