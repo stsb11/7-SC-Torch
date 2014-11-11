@@ -1,0 +1,22 @@
+* Key words
+
+LED, Resistor, PTM switch, Acrylic, M3X12, PCB, Drill, 2D design, Hand
+drawn picture, Final photo, Batteries, Lead,
+
+Circuit wizard - circuit diagram, Circuit wizard -- PCB, Countersunk,
+Screwdriver, Laser cutter, Oxidization, Wire wool, Solder, Copper track,
+1mm twist drill bit, chuck, precision drill, delete tool, artwork, real
+world, component side, track side, dry joint, toggle tool, drawing tool,
+gallery, input, output, process, passive, current, polish, flat file,
+wet and dry paper, de-solder.
+
+** Step 1. Cleaning
+
+When I was given my Printed Circuit board (PCB) I cleaned the copper
+tracks with fine grade wire wool to remove the dirt (oxidization). This
+was so that when I soldered my components to it they would stick first
+time without the track lifting, as I have learnt that solder does not
+stick to a dirty track.
+
+Now continue this portfolio in this style above. You can delete this
+line.

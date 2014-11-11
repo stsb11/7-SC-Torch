@@ -1,0 +1,75 @@
+LED Torch Project.
+
+To complete this project successfully and to a high enough standard that
+is acceptable of any good craftsman, you must be wise with your time.
+
+You will only have 6 x 1 hour lessons in school, so therefore you are
+trusted to complete this project in your own time at lunch, at home or
+both.
+
+Use the table below to write yourself a plan of action so you will get
+your work completed and handed in on time.
+
+|            | #+BEGIN_QUOTE     | #+BEGIN_QUOTE     | #+BEGIN_QUOTE                                   | #+BEGIN_QUOTE                            | #+BEGIN_QUOTE                             | #+BEGIN_QUOTE                          | #+BEGIN_QUOTE                          | #+BEGIN_QUOTE              | #+BEGIN_QUOTE                            | #+BEGIN_QUOTE                        | #+BEGIN_QUOTE                   | #+BEGIN_QUOTE                            | #+BEGIN_QUOTE                                                                |
+|            |   Clean the PCB   |   Drill the PCB   |   Solder the PCB                                |   Put the case together around the PCB   |   Clean the edges of the finished Torch   |   Complete Stage 1 of the work sheet   |   Complete Stage 2 of the work sheet   |   Complete the portfolio   |   Create the circuit on circuit wizard   |   Create the PCB on circuit wizard   |   Draw the torch on 2D Design   |   Proof read and ‘green pen' your work   |   Hand in both Practical and Theory work, to you teacher. End of unit test   |
+|            | #+END_QUOTE       | #+END_QUOTE       | #+END_QUOTE                                     | #+END_QUOTE                              | #+END_QUOTE                               | #+END_QUOTE                            | #+END_QUOTE                            | #+END_QUOTE                | #+END_QUOTE                              | #+END_QUOTE                          | #+END_QUOTE                     | #+END_QUOTE                              | #+END_QUOTE                                                                  |
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+|------------+-------------------+-------------------+-------------------------------------------------+------------------------------------------+-------------------------------------------+----------------------------------------+----------------------------------------+----------------------------+------------------------------------------+--------------------------------------+---------------------------------+------------------------------------------+------------------------------------------------------------------------------|
+| Lesson 1   | X                 | X                 |                                                 |                                          |                                           |                                        |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lesson 2   |                   | X                 | X                                               |                                          |                                           |                                        |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lesson 3   |                   |                   | X                                               |                                          |                                           | X                                      |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lesson 4   |                   |                   |                                                 |                                          | X                                         |                                        |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lesson 5   |                   |                   |                                                 |                                          |                                           |                                        |                                        |                            | X                                        |                                      |                                 |                                          |                                                                              |
+| Lunch 1    |                   |                   |                                                 | X                                        |                                           |                                        |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lunch 2    |                   |                   |                                                 |                                          | X                                         |                                        |                                        |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Lunch 3    |                   |                   |                                                 |                                          |                                           |                                        |                                        |                            |                                          | X                                    |                                 |                                          |                                                                              |
+| Lunch 4    |                   |                   |                                                 |                                          |                                           |                                        |                                        |                            |                                          |                                      | X                               |                                          |                                                                              |
+| Lunch 5    |                   |                   |                                                 |                                          |                                           |                                        |                                        |                            |                                          |                                      | X                               |                                          |                                                                              |
+| Home 1     |                   |                   |                                                 |                                          |                                           |                                        | X                                      |                            |                                          |                                      |                                 |                                          |                                                                              |
+| Home 2     |                   |                   |                                                 |                                          |                                           |                                        |                                        | X                          |                                          |                                      |                                 |                                          |                                                                              |
+| Home 3     |                   |                   |                                                 |                                          |                                           |                                        |                                        |                            |                                          |                                      |                                 | X                                        |                                                                              |
+| Lesson 6   |                   |                   | Last lesson of the week commencing 14/10/2013   |                                          | X                                         |
+
+*USE YOUR TIME WISELY*
+
+| LED Torch Stage 1   | Electronics   |
+|---------------------+---------------|
+
+[[media/image1.png]]
+
+[[media/image2.jpeg]]
+
+| Resistor   | Band 1     | Band 2     | Band 3       | OHMS          | -       | +       |
+|------------+------------+------------+--------------+---------------+---------+---------|
+|            | Green 5    | Blue 6     | Brown 0      | 560           | 532     | 588     |
+|            | Red 2      | Red 2      | Red 00       | 2200 / 2K2    | 2090    | 2310    |
+|            | Yellow 4   | Violet 7   | Brown 0      | 470           | 447     | 494     |
+|            | Green 5    | Blue 6     | Brown 0      | 560           | 532     | 588     |
+|            | Brown 1    | Grey 8     | Orange 000   | 18000 / 18K   | 17100   | 18900   |
+|            | Green 5    | Blue 6     | Black -      | 56            | 53.2    | 58.8    |
+
+(The columns in red are important; the ones in black are exceptional at
+this stage)
+
+[[media/image3.jpeg]]
+
+[[media/image3.jpeg]] (Either one accepted)
+
+[[media/image4.png]][[media/image5.jpeg]][[media/image5.jpeg]]
+
+|     | Thermo plastic                                           | Thermosetting plastic                      |
+|-----+----------------------------------------------------------+--------------------------------------------|
+| 1   | Acrylic, LDPE, HDPE, polystyrene, polypropylene, nylon   | Epoxy resin, polyester resin               |
+|     |                                                          |                                            |
+|     |                                                          | urea formaldehyde, melamine formaldehyde   |
+| 2   |                                                          |                                            |
+| 3   |                                                          |                                            |
+
+| Name                                      | Symbol   | Picture   |
+|-------------------------------------------+----------+-----------|
+| 2 x 3 volt cells (battery)                |          |           |
+| LED                                       |          |           |
+| PTM Switch                                |          |           |
+| Resistor (use the correct band colours)   |          |           |
+
+[[media/image6.jpeg]][[media/image7.png]][[media/image8.png]][[media/image9.jpeg]][[media/image10.jpeg]][[media/image3.jpeg]][[media/image11.png]][[media/image4.png]]
