@@ -1,0 +1,128 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
+#+TITLE: The LED Torch - Planning and Research
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/MarcScott/7-SC-Torch">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+#+BEGIN_HTML
+<div class=ribbon2>
+<a href="../index.html">Home</a>
+</div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Planning your project
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+- When engineers have to complete large projects, they often rely on Gantt charts to help them organise themselves.
+- A Gantt chart contains all the tasks you need to complete, and a date on whcih they will be completed.
+- The Gantt chart below contains all the tasks for this project.
+| Lesson | Research | Circuit Design | Housing Design | Soldering | Assembly |
+|--------+----------+----------------+----------------+-----------+----------|
+| 1      |          |                |                |           |          |
+| 2      |          |                |                |           |          |
+| 3      |          |                |                |           |          |
+| 4      |          |                |                |           |          |
+| 5      |          |                |                |           |          |
+| 6      |          |                |                |           |          |
+- You can complete the tasks in any order you like, so long as they are all completed within the 6 lessons allowed.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Copy the table above and draw an =X= in the cell to indicate when you will complete each task.
+
+* Research
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- There are three distinct areas for you to research for this project.
+  1. Resistors
+  2. LEDs
+  3. Plastics
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+[[https://upload.wikimedia.org/wikipedia/commons/e/e6/Resistor.jpg]]
+- Electricity is often described as a flow of electrons (tiny particles with a negative charge that you'll learn about in Science).
+- Look at the animation below to see electrons flowing through a wire.
+- The rate at which electrons are flowing (the number of electrons passing through a component each second) is called the /electric current/, and is measured in /Amps/
+- A resistor acts to reduce the number of electrons that can flow through a wire each second.
+- The higher the /resistance/ of a resistor, the greater effect it has on electric current.
