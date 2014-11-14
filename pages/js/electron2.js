@@ -2,23 +2,23 @@ var system;
 var resistance;
 
 function setup() {
-    frameRate = 25;
+    frameRate = 60;
   createCanvas(820, 400);
     system = new ParticleSystem(createVector(51,125));
     //Create the pipe
-    A = createVector(50,50);
+    A = createVector(-50,50);
     B = createVector(200,50);
     C = createVector(300,100);
     D = createVector(500,100);
     E = createVector(600,50);
     F = createVector(700,50);
-    G = createVector(50,200);
+    G = createVector(-50,200);
     H = createVector(200,200);
     I = createVector(300,150);
     J = createVector(500,150);
     K = createVector(600,200);
     L = createVector(700,200);
-    resistance = createSlider(51,150,51)
+    resistance = createSlider(51,125,100)
     resistance.position(30,30)
 }
 
@@ -40,7 +40,9 @@ function draw() {
     line(I.x,I.y,J.x,J.y);
     line(J.x,J.y,K.x,K.y);
     line(K.x,K.y,L.x,L.y);
-    system.addParticle();
+    for(var i = 0; i<5; i++){
+	system.addParticle();
+    }
     system.run();
 
 
@@ -48,8 +50,8 @@ function draw() {
 
 // A simple Particle class
 var Particle = function(position) {
-    this.acceleration = createVector(0.5, 0);
-    this.velocity = createVector(random(0,5), random(-4, 0));
+    this.acceleration = createVector(0.2, 0);
+    this.velocity = createVector(random(0,1), random(-1, 0));
     this.position = position.get();
     //give the praticle a random y position on creation
     this.position.y += random(-74,74)
@@ -63,26 +65,52 @@ Particle.prototype.run = function() {
 
 // Method to update position and handle collisions
 Particle.prototype.update = function(){
-    this.velocity.add(this.acceleration);
-    if(this.position.x > A.x && this.position.x < B.x){//in first Rect
+
+    if(this.position.x > B.x && this.position.x < C.x){//in first Trap
+	if(inTrapezium(this.position,B,C,I,H) == false){
+	    /* this.velocity.x = random(-5,-10)
+	       this.velocity.y = - this.velocity.y
+	       this.lifespan -= 10;*/
+	    //console.log(this.velocity)
+	    this.velocity = calcReflection(this.velocity,B,C).mult(-1)
+	    if(this.position.y > 125){
+		this.position.x -= 2
+		this.position.y -= 2
+		this.velocity = this.velocity.mult(-1)
+	    }
+
+	}
+    }
+    else if(this.position.x > D.x && this.position.x < E.x){//in first Trap
+	if(inTrapezium(this.position,D,E,K,J) == false){
+	    this.velocity = calcReflection(this.velocity,B,C).mult(-1)
+	    if(this.position.y > 125){
+		this.position.x += 2
+		this.position.y -= 2
+	    }
+
+	}
+    }
+    else if(this.position.x > A.x && this.position.x < B.x){//in first Rect
 	if(inRect(this.position,A,B,H,G) == false){
 	    this.velocity.y = - this.velocity.y;
-	    this.lifespan -= 50;
+	    this.lifespan -= 10;
 	}
     }
-    else if(this.position.x > B.x && this.position.x < C.x){//in first Trap
-	if(inTrapezium(this.position,B,C,I,H) == false){
-	    this.velocity.x = -10
-	    this.velocity.y = - this.velocity.y
-	    this.lifespan -= 2;
-	}
-    }
+
     else if(this.position.x > C.x && this.position.x < D.x){//in second Rect
 	if(inRect(this.position,C,D,J,I) == false){
 	    this.velocity.y = - this.velocity.y;
-	    this.lifespan -= 2;
+	    this.lifespan -= 10;
 	}
     }
+    else if(this.position.x > E.x && this.position.x < F.x){//in second Rect
+	if(inRect(this.position,E,F,L,K) == false){
+	    this.velocity.y = - this.velocity.y;
+	    this.energy = this.energy - 1;
+	}
+    }
+    this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
 
 };
@@ -106,7 +134,7 @@ Particle.prototype.isDead = function(){
 */
 //Kill the particle on exit of the wire
 Particle.prototype.isDead = function(){
-    if(this.position.x > 700){
+    if(this.position.x > 700 || this.position.y<A.y || this.position.y>G.y){
 	return true;
     }
     else{
@@ -184,3 +212,26 @@ function inTrapezium(p,a,b,c,d){
     var inRectangle = inRect(p,e,b,c,f)
     return inUpperTriangle || inLowerTriangle || inRectangle
 }
+
+
+function calculateNormal(a,b){
+    var dx = b.x - a.x;
+    var dy = b.y - a.y;
+    magnitude = Math.sqrt(dx * dx + dy * dy)
+    var reflection = [dy/magnitude,-dx/magnitude];
+    return reflection
+}
+
+function calcReflection(p,a,b){
+    var normArray = calculateNormal(a,b);
+    var dotProduct = (p.x*normArray[0]+p.y*normArray[1])
+    var result = [2*dotProduct*normArray[0],2*dotProduct*normArray[1]]
+    p.x = result[0] - p.x
+    p.y = result[1] -p.y
+    return p
+}
+
+
+//    R = 2 * (V dot N)* N - V
+//r = a - 2<a, n> n
+    
