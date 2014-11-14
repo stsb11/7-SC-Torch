@@ -1,87 +1,112 @@
 var system;
-var a,b,c,p
+var resistance
 
-function setup() {
-    frameRate = 1;
-    createCanvas(820, 400);
-    a = createVector(50,50);
-    b = createVector(200,150);
-    c = createVector(200,200);
-    d = createVector(50,300)
-    p = createVector(49,100);
+function setup(){
+    frameRate = 60;
+    createCanvas(820,400);
+    emitter = new ParticleEmitter(createVector(50,125));
+    //Arrays to hold all the point vectors
+    pointsUpper = [];
+    pointsLower = [];
+    //Add in points to draw resistor and wire upper line
+    pointsUpper.push(createVector(-50,50));
+    pointsUpper.push(createVector(200,50));
+    pointsUpper.push(createVector(300,100));
+    pointsUpper.push(createVector(500,100));
+    pointsUpper.push(createVector(600,50));
+    pointsUpper.push(createVector(700,50));
+    //Add in points to draw resistor and wire lower line
+    pointsLower.push(createVector(-50,200));
+    pointsLower.push(createVector(200,200));
+    pointsLower.push(createVector(300,150));
+    pointsLower.push(createVector(500,150));
+    pointsLower.push(createVector(600,200));
+    pointsLower.push(createVector(700,200));
+    //Create a resistor slider
+    resistance = createSlider(51,125,100);
+    resistance.position(30,30)
+};
 
-}
-
-function draw() {
-    background(51);
+function draw(){
+    background(50);
     stroke(255)
-    drawTrapezium(a,b,c,d)
-    if(inTrapezium(p,a,b,c,d) === true){
-	fill(255,0,0)
+    strokeWeight(5)
+    //Set points to change with slider
+    pointsUpper[2].y = resistance.value();
+    pointsUpper[3].y = resistance.value();
+    pointsLower[2].y = 250 - resistance.value();
+    pointsLower[3].y = 250 - resistance.value();
+    for(i=0;i<pointsUpper.length-1;i++){
+	line(pointsUpper[i].x,pointsUpper[i].y,pointsUpper[i+1].x,pointsUpper[i+1].y)
+	line(pointsLower[i].x,pointsLower[i].y,pointsLower[i+1].x,pointsLower[i+1].y)
+    };
+    emitter.addParticle();
+    emitter.run();
+};
+
+var ParticleEmitter = function(position){
+    this.origin = position.get()
+    this.particles = [];
+};
+
+var Particle = function(position){
+    this.acceleration = createVector(0.2,0);
+    this.velocity = createVector(1,0);
+    this.position = position.get();
+    this.position.y = random(190,60);
+    this.energy = 255.0;
+};
+
+Particle.prototype.run = function(){
+    this.update();
+    this.display();
+    this.energy --;
+};
+
+Particle.prototype.update = function(){
+    if(checkCollision(this.position) == true){
+	this.energy = 0
+    }
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+};
+
+Particle.prototype.display = function(){
+    this.radius = 3
+    noStroke();
+    fill(255,255-this.energy,255-this.energy);
+    ellipse(this.position.x,this.position.y,6,6);
+};
+
+Particle.prototype.isDead = function(){
+    if (this.energy < 0){
+	return true;
     }
     else{
-	fill(0,0,255)
+	return false;
     }
-    drawParticle(p)
-}
+};
 
-//define the cross product of two p5 Vector
-function crossProduct(u,v){
-   return u.x * v.y - u.y * v.x
-}
+ParticleEmitter.prototype.addParticle = function(){
+    this.particles.push(new Particle(this.origin));
+};
 
-//Check if point p lies along the same side of line a,b as point c
-function sameSide(p,a,b,c){
-    var bSuba = p5.Vector.sub(b,a)
-    var pSuba = p5.Vector.sub(p,a)
-    var cSuba = p5.Vector.sub(c,a)
-    var xProd1 = crossProduct(bSuba,pSuba)
-    var xProd2 = crossProduct(bSuba,cSuba)
-    return (xProd1 * xProd2 >= 0)
-}
+ParticleEmitter.prototype.run = function(){
+    for (var i = this.particles.length -1; i >=0; i--){
+	this.particles[i].run()
+	if (this.particles[i].isDead()){
+	    this.particles.splice(i,1);
+	}
+    }
+};
 
-//Check if point p lies inside triangle a,b,c
-function inTriangle(p,a,b,c){
-    return sameSide(p,a,b,c) && sameSide(p,a,c,b) && sameSide(p,b,c,a)
+function checkCollision(p){
+    var bounce = false;
+    var P1C = createVector(p.x - pointsUpper[1].x,p.y - pointsUpper[1].y);
+    var normal = createVector((pointsUpper[2].y - pointsUpper[1].y),(pointsUpper[2].x - pointsUpper[1].x))
+    var distance = P1C.x * normal.x + P1C.y * normal.y
+    if(distance < 3){
+	console.log(distance)
+	bounce = true
+    }
 }
-
-//Check if point lies inside rectangle a,b,c,d
-//a-----b
-//|     |
-//d-----c
-function inRect(p,a,b,c,d){
-    return p.x > a.x && p.x < b.x && p.y > a.y && p.y < d.y
-}
-
-//Check if point lies inside trapezium a,b,c,d
-/* 
-a
-|\
-| \
-e  b
-|  |
-f  c
-| /
-|/
-d
-*/
-function inTrapezium(p,a,b,c,d){
-    var e = createVector(a.x,b.y);
-    var f = createVector(d.x,c.y);
-    var inUpperTriangle = inTriangle(p,a,b,e);
-    var inLowerTriangle = inTriangle(p,c,d,f);
-    var inRectangle = inRect(p,e,b,c,f)
-    return inUpperTriangle || inLowerTriangle || inRectangle
-}
-
-function drawTrapezium(a,b,c,d){
-    line(a.x,a.y,b.x,b.y)
-    line(d.x,d.y,c.x,c.y)
-}
-
-function drawParticle(p){
-    ellipse(p.x,p.y,10,10)
-}
-    
-	
-
