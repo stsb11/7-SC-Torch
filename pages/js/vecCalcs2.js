@@ -16,15 +16,24 @@ function draw(){
     fill(255);
     A.display();
     B.display();
-    C.display()
+
     stroke(255)
     line(A.position.x,A.position.y,B.position.x,B.position.y)
     stroke(255,100,100)
     line(A.position.x,A.position.y,C.position.x,C.position.y)
-    D = calcProjection(A.position,B.position,C.position)
+    var projection = calcProjection(A.position,B.position,C.position)
+    var q = closestPoint(A.position,B.position,projection)
+    if(detectCollision(q,C) == true){
+	fill(0,255,0);
+    }
+    else{
+	fill(255,0,0);
+    }
+    C.display()
+    ellipse(q.x,q.y,5,5)
+
     stroke(100,255,100)
     strokeWeight(3)
-    line(A.position.x,A.position.y,D.x,D.y)
     
 };
 
@@ -43,7 +52,6 @@ var Particle=function(x,y){
     this.r = 10;
 }
 Particle.prototype.display = function(){
-    fill(200,50,50)
     ellipse(this.position.x,this.position.y,this.r*2,this.r*2)
 }
 
@@ -53,11 +61,67 @@ function calcProjection(APos,BPos,CPos){
     var projection = p5.Vector.mult(vectorAB,(p5.Vector.dot(vectorAB,vectorAC)))
     writeLabels(vectorAB,vectorAC,projection)
     var projected = p5.Vector.add(APos,projection)
-    return projected
-
-
-
+    return projection
 }
+
+function closestPoint(APos,BPos,projection){
+    var rightMost;
+    var leftMost;
+    var upperMost;
+    var lowerMost;
+    var inLine = false;
+    var vectorAB = p5.Vector.sub(BPos,APos);
+    var q = p5.Vector.add(APos,projection);
+
+    if(APos.x < BPos.x){
+	rightMost = BPos;
+	leftMost = APos;
+    }
+    else if(APos.x > BPos.x){
+	rightMost = APos;
+	leftMost = BPos;
+    }
+    else{
+	inLine = true;
+	if(APos.y < BPos.y){
+	    upperMost = APos;
+	    lowerMost = BPos;
+	}
+	else{
+	    upperMost = BPos;
+	    lowerMost = APos;
+	}
+    }
+    if(inLine == false){
+	if(q.x < leftMost.x){
+	    q = leftMost
+	}
+	if(q.x > rightMost.x){
+	    q = rightMost
+	}
+    }
+    else{
+	if(q.y < upperMost.y){
+	    q = upperMost;
+	}
+	else if(q.y > lowerMost.y){
+	    q = lowerMost;
+	}
+    }
+    return q
+}
+
+function detectCollision(q,p){
+    var shortestDist = p5.Vector.sub(p.position,q)
+    if((p.r * p.r)>(p5.Vector.dot(shortestDist,shortestDist))){
+	return true;
+    }
+    else{
+	return false;
+    }
+}
+    
+
 
 function writeLabels(AB,AC,projection){
     fill(255)
