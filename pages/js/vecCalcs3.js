@@ -1,12 +1,18 @@
 var myPoint;
 var dotProductText;
-var moveA, moveB, moveC
-var A,B,C,D
+var moveA, moveB, moveC, moveTarget;
+var A,B,C,D;
+var start;
+
 function setup(){
     createCanvas(800,400);
     A = new Point(150,150);
     B = new Point(300,300);
-    C = new Particle(300,150)
+    target = new Point(100,300);
+    C = new Particle(300,150,target);
+    var btn = createButton('Start')
+    btn.position(150, 65);
+    btn.mousePressed(start);
     
 };
 
@@ -16,7 +22,7 @@ function draw(){
     fill(255);
     A.display();
     B.display();
-
+    target.display();
     stroke(255)
     line(A.position.x,A.position.y,B.position.x,B.position.y)
     stroke(255,100,100)
@@ -24,19 +30,27 @@ function draw(){
     var projection = calcProjection(A.position,B.position,C.position)
     var q = closestPoint(A.position,B.position,projection)
     if(detectCollision(q,C) == true){
+	Particle.collide(A,B)
 	fill(0,255,0);
     }
     else{
 	fill(255,0,0);
     }
-    C.display()
+    C.display(target)
     ellipse(q.x,q.y,5,5)
 
     stroke(100,255,100)
     strokeWeight(3)
+    C.update()
     
 };
 
+/*Particle.prototype.collide = function(A,B){
+    var lineVelocity = calcProjection(
+*/
+function start(){
+    C.velocity = p5.Vector.sub(target.position,C.position).normalize();
+}
 var Point = function(x,y){
     this.position = createVector(x,y);
     this.r = 3;
@@ -47,10 +61,17 @@ Point.prototype.display = function(){
     ellipse(this.position.x,this.position.y,this.r*2,this.r*2);
 }
 
-var Particle=function(x,y){
+var Particle = function(x,y,target){
     this.position = createVector(x,y);
     this.r = 10;
+    this.velocity = createVector(0,0);
 }
+
+Particle.prototype.update = function(target){
+
+    this.position.add(this.velocity)
+}
+
 Particle.prototype.display = function(){
     ellipse(this.position.x,this.position.y,this.r*2,this.r*2)
 }
@@ -151,6 +172,10 @@ function mouseDragged() {
      else if(moveC == true){
 	C.position.x = mouseX;
 	C.position.y = mouseY;
+     }
+    else if(moveTarget == true){
+	target.position.x = mouseX;
+	target.position.y = mouseY;
     }
     return false;
 }
@@ -165,10 +190,14 @@ function mousePressed(){
     else if(mouseX > (C.position.x -C.r) && mouseX < (C.position.x + C.r) && mouseY < (C.position.y +C.r) && mouseY > (C.position.y - C.r)){
 	moveC = true;
     }
+    else if(mouseX > (target.position.x -target.r) && mouseX < (target.position.x + target.r) && mouseY < (target.position.y +target.r) && mouseY > (target.position.y - target.r)){
+	moveTarget = true;
+    }
 }
 
 function mouseReleased(){
     moveA = false;
     moveB = false;
-    moveC = false
+    moveC = false;
+    moveTarget = false;
 }
