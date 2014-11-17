@@ -8,18 +8,15 @@ function setup(){
     green = color(0,255,0);
     blue = color(0,0,255)
     createCanvas(800,300);
-    A = new Point(150,150,5);
-    Points.push(A);
-    B = new Point(150,300,5);
-    Points.push(B);
-    AB = new Line(A,B)
-    Lines.push(AB);
-    C = new Point(200,300,5);
-    Points.push(C)
-    D = new Point(200,150,5);
-    Points.push(D);
-    CD = new Line(C,D);
-    Lines.push(CD);
+    Points.push(new Point(150,50,5),
+		new Point(150,250,5),
+		new Point(400,50,5),
+		new Point(400,250,5)
+	       );
+    Lines.push(new Line(Points[0],Points[1]),
+	       new Line(Points[1],Points[2]),
+	       new Line(Points[2],Points[3])
+	      );
     firstEmitter = new Emitter(600,100);
 }
 
@@ -28,8 +25,9 @@ function draw(){
     for(var i = 0;i < Points.length;i++){
 	Points[i].display(white);
     }
-    AB.display(white);
-    CD.display(white)
+    for(var i = 0; i < Lines.length; i++){
+	Lines[i].display(white);
+    }
     firstEmitter.addParticle();
     firstEmitter.run();
     
@@ -96,8 +94,8 @@ Emitter.prototype.run = function(){
 
 //Class for particles
 var Particle = function(position){
-    this.acceleration = createVector(0,0);
-    this.velocity = createVector(random(-0.5,-3),random(-0.5,0.5));
+    this.acceleration = createVector(-0.1,0);
+    this.velocity = createVector(random(0,-1),random(-0.5,0.5));
     this.width = createVector(0,random(-20,20));
     this.position = p5.Vector.add(position,this.width);
     this.lifespan = 100;
@@ -138,8 +136,8 @@ Particle.prototype.isDead = function(){
 Particle.prototype.possCollision = function(){
     this.colour = red;
     for(var i = 0; i < Lines.length; i++){
-	    if(this.position.x > Lines[i].UpperLeft.x && this.position.x < Lines[i].LowerRight.x){
-	if(this.position.y > Lines[i].UpperLeft.y && this.position.y < Lines[i].LowerRight.y){
+	if(this.position.x > (Lines[i].UpperLeft.x - this.radius) && this.position.x < (Lines[i].LowerRight.x + this.radius)){
+	    if(this.position.y > (Lines[i].UpperLeft.y -this.radius) && this.position.y < Lines[i].LowerRight.y + this.radius){
 	    this.collision(Lines[i]);
 	    this.colour = green;
 	    return Lines[i]
