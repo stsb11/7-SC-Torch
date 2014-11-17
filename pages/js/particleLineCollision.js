@@ -139,10 +139,8 @@ Particle.prototype.possCollision = function(){
 	if(this.position.x > (Lines[i].UpperLeft.x - this.radius) && this.position.x < (Lines[i].LowerRight.x + this.radius)){
 	    if(this.position.y > (Lines[i].UpperLeft.y -this.radius) && this.position.y < Lines[i].LowerRight.y + this.radius){
 	    this.collision(Lines[i]);
-	    this.colour = green;
-	    return Lines[i]
+	    }
 	}
-	   }
     }
 }
 
@@ -155,18 +153,13 @@ Particle.prototype.collision = function(lineSegment){
 //    ellipse(closest.x,closest.y,5,5)
     var shortestDistance = p5.Vector.sub(this.position,closest)
     if((this.radius*this.radius) > (p5.Vector.dot(shortestDistance,shortestDistance))){
-	console.log('Hit')
 	VelocityLine = p5.Vector.mult(lineSegment.Normalised,(p5.Vector.dot(lineSegment.Normalised,this.velocity)));
 	VelocityNorm = p5.Vector.mult(shortestDistance.normalize(),(p5.Vector.dot(shortestDistance.normalize(),this.velocity)));
 	VelocityNorm.mult(-1)
 	this.velocity = p5.Vector.add(VelocityLine,VelocityNorm)
 	this.position.add(this.velocity)
-	collision = true;
+//	this.update()
     }
-    else{
-	collision = false;
-    }
-    return collision
 }
 
 //Calculate projection of A onto B (A needs to be normalised)
