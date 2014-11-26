@@ -1,34 +1,64 @@
 var Points = [];
 var Lines = [];
-var white = (255,255,255);
-
+var Voltage;
+var Resistance = 2;
+var count = 0;
+var hold = 1;
 function setup(){
+    frameRate = 30
     colorMode(RGB, 255)
     red = color(255,0,0);
     green = color(0,255,0);
-    blue = color(0,0,255)
-    createCanvas(800,300);
-    Points.push(new Point(150,50,5),
-		new Point(150,250,5),
-		new Point(400,50,5),
-		new Point(400,250,5)
+    blue = color(125, 249, 255)
+    white = color(255)
+    createCanvas(600,300);
+    Points.push(new Point(0,100,0),
+		new Point(600,100,0),
+		new Point(0,200,0),
+		new Point(600,200,0)
 	       );
     Lines.push(new Line(Points[0],Points[1]),
-	       new Line(Points[1],Points[2]),
 	       new Line(Points[2],Points[3])
 	      );
-    firstEmitter = new Emitter(600,100);
+    firstEmitter = new Emitter(590,150);
+
+    Voltage = createSlider(0,10,1)
+    Voltage.position(20,40)
 }
 
 function draw(){
+    
     background(50);
+    //START TEXT//
+    textSize(18);
+    textAlign(ENTER)
+    stroke(white)
+    fill(white)
+    text("Voltage", 90, 30);
+    text('0V',550,230)
+    text('+'+Voltage.value()+'V',10,230)
+
+    //END TEXT//
     for(var i = 0;i < Points.length;i++){
 	Points[i].display(white);
     }
     for(var i = 0; i < Lines.length; i++){
 	Lines[i].display(white);
     }
-    firstEmitter.addParticle();
+    for(var i = 0 ;i<Voltage.value(); i++){
+	firstEmitter.addParticle();
+    }
+    count = 0
+    if(frameCount%60 == 0){
+	for(var i = 0; i < firstEmitter.particles.length; i++){
+	    if(firstEmitter.particles[i].position.x >300 && firstEmitter.particles[i].position.x <550){
+		count += 1
+	    }
+	}
+	hold = count
+    }
+    
+    text('Current = '+ Math.ceil(hold)/10+'A',250,230)
     firstEmitter.run();
     
 }
@@ -94,13 +124,15 @@ Emitter.prototype.run = function(){
 
 //Class for particles
 var Particle = function(position){
-    this.acceleration = createVector(-0.1,0);
-    this.velocity = createVector(random(0,-1),random(-0.5,0.5));
-    this.width = createVector(0,random(-20,20));
+//    this.acceleration = createVector(0,0);
+    this.acceleration = createVector(-Voltage.value()/20,0);
+//    this.velocity = createVector(random(-Voltage.value(),0),random(-3,3));
+    this.velocity = createVector(random(0,0),random(-3,3));
+    this.width = createVector(0,random(-45,45));
     this.position = p5.Vector.add(position,this.width);
     this.lifespan = 100;
     this.radius = 5
-    this.colour = red;
+    this.colour = blue;
 }
 
 //Method to run each frame for the particle
@@ -113,6 +145,7 @@ Particle.prototype.run = function(){
 Particle.prototype.update = function(){
     this.lifespan--;
     this.possCollision()
+    this.acceleration = createVector(-Voltage.value()/20,0);
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
 }
@@ -126,7 +159,7 @@ Particle.prototype.display = function(){
 //Method to kill particles
 Particle.prototype.isDead = function(){
     var isDead;
-    if(this.position.x > width-50 || this.position.x < 0 + 50 || this.position.y > height -50 || this.position.y < 0+50){
+    if(this.position.x > width || this.position.x < 0  || this.position.y > height || this.position.y < 0){
 	isDead = true
     }
     return isDead
@@ -134,7 +167,6 @@ Particle.prototype.isDead = function(){
 
 //Method to check possible collision
 Particle.prototype.possCollision = function(){
-    this.colour = red;
     for(var i = 0; i < Lines.length; i++){
 	if(this.position.x > (Lines[i].UpperLeft.x - this.radius) && this.position.x < (Lines[i].LowerRight.x + this.radius)){
 	    if(this.position.y > (Lines[i].UpperLeft.y -this.radius) && this.position.y < Lines[i].LowerRight.y + this.radius){
@@ -157,6 +189,7 @@ Particle.prototype.collision = function(lineSegment){
 	VelocityNorm = p5.Vector.mult(shortestDistance.normalize(),(p5.Vector.dot(shortestDistance.normalize(),this.velocity)));
 	VelocityNorm.mult(-1)
 	this.velocity = p5.Vector.add(VelocityLine,VelocityNorm)
+	this.velocity.mult(1/Resistance)
 	this.position.add(this.velocity)
 //	this.update()
     }
