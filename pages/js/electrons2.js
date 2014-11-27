@@ -16,8 +16,7 @@ function setup(){
     createCanvas(600,300);
     Voltage = createSlider(0,10,1)
     Voltage.position(20,40)
-    Thickness = createSlider(100,140,100)
-    Thickness.position(200,40)
+  
     Points.push(new Point(0,100,0),
 		new Point(150,100,0),
 		new Point(250,100,0),
@@ -65,7 +64,7 @@ function draw(){
     stroke(white)
     fill(white)
     text("Voltage", 60, 30);
-    text("Resistance", 230, 30);
+    
     text('0V',550,230)
     text('+'+Voltage.value()+'V',10,230)
     //END TEXT//
@@ -75,23 +74,10 @@ function draw(){
     for(var i = 0; i < Lines.length; i++){
 	Lines[i].display(white);
     }
-    Current = 0;
-    for(var i = 0;i < firstEmitter.particles.length;i++){
-	Current += firstEmitter.particles[i].velocity.x;
-    }
-    Current = Current/firstEmitter.particles.length
     
-    
-    text('Current = '+(-Current.toFixed(1))+'A',250,230)
-
     firstEmitter.run();
 
-    //Position points according to slider
-    Points[2].position.y = Thickness.value()
-    Points[3].position.y = Thickness.value()
-    Points[8].position.y = 300 - Thickness.value()
-    Points[9].position.y = 300 - Thickness.value()
-
+ 
 
     
 }
