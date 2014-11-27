@@ -89,7 +89,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - When engineers have to complete large projects, they often rely on Gantt charts to help them organise themselves.
-- A Gantt chart contains all the tasks you need to complete, and a date on whcih they will be completed.
+- A Gantt chart contains all the tasks you need to complete, and a date on which they will be completed.
 - The Gantt chart below contains all the tasks for this project.
 | Lesson | Research | Circuit Design | Housing Design | Soldering | Assembly |
 |--------+----------+----------------+----------------+-----------+----------|
@@ -117,22 +117,23 @@
 - Electricity is often described as a flow of electrons (tiny particles with a negative charge that you'll learn about in Science).
 - Look at the animation below to see electrons flowing through a wire.
 #+BEGIN_HTML
-<object data="js/simpleWire.html" width='600px' height='300px'></object>
+<object data="js/electrons1.html" width='600px' height='300px'></object>
 #+END_HTML
 - Probably the most important concept you need to understand about the electricity is Potential Difference, which we often call the Voltage.
 - Potential Difference is measured in Volts. Both the unit and the symbol for Voltage is a capital /V/.
 - When a potential difference is applied to either ends of a wire (by using a battery or a power supply for instance), a force acts on electrons inside the wire.
 - The force pulls the electrons towards the positive side of the battery or power supply.
-- The best way to think about Voltage is to imagine it as the ammount of energy each electron carries. This energy causes the electron to move, so the more energy it has, the faster it moves.
-- If there is a voltage of 1 volt across a wire, each electron carries about 0.0000000000160217657 Joules of energy. It takes about 1 Joule of energy to lift a small apple a metre into the air, so each electron carries a tiny amount of energy.
+
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
-<object data="js/simpleWireVoltage.html" width='600px' height='300px'></object>
+<object data="js/electrons2.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the voltage acting across the wire.
+- The best way to think about Voltage is to imagine it as the amount of energy each electron carries. This energy causes the electron to move, so the more energy it has, the faster it moves.
+- If there is a voltage of 1 volt across a wire, each electron carries about 0.000000000016 Joules of energy. It takes about 1 Joule of energy to lift a small apple a metre into the air, so each electron carries a tiny amount of energy.
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -151,18 +152,18 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Another property of this flow of electrons is called Current.
-- Writing down current is a little annoying. It's symbol is /I/ but is measured in Amps (/A/).
+- Writing down current is a little annoying. It's symbol is /I/ but it is measured in Amps (/A/).
 - Current is described as the /rate of flow of electrons/.
-- An easy way to think about current is to imagine how many electrons flow through a wire or a component every second.
-- A current of 1A flowing through a wire means that there are 6240000000000000000 electrons flowing though it every second.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
-<object data="js/simpleWireCurrent.html" width='600px' height='300px'></object>
+<object data="js/electrons3.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the voltage and note what happens to the current flowing in the wire..
+- An easy way to think about current is to imagine how many electrons flow through a wire or a component every second.
+- A current of 1A flowing through a wire means that there are 6240000000000000000 electrons flowing though it every second!
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -190,7 +191,16 @@
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
-<object data="js/simpleWireCurrent.html" width='600px' height='300px'></object>
+<object data="js/electrons4.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the voltage and note what happens to the current flowing in the wire..
 - The easiest way to imagine resistance is the narrowing of the wire. If you were to imagine water flowing through a pipe, it would find it more difficult to get through a narrower pipe than a wide one.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:      
+- In your own words, try to describe the relationship between the current flowing through the wire, the potential difference across it and the resistance of the wire.

@@ -50,8 +50,7 @@ function setup(){
 	firstEmitter.particles[i].position = createVector(random(0,600),random(110,190))
 	firstEmitter.particles[i].velocity = createVector(random(3,-3),random(-3,3))
 	firstEmitter.particles[i].acceleration = createVector(0,0)
-	
-    }
+	    }
     
 }
 
