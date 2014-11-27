@@ -6,16 +6,18 @@
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
-<div class=ribbon>
-<a href="https://github.com/MarcScott/7-SC-Torch">Fork me on GitHub</a>
-</div>
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
 #+END_HTML
 
-#+BEGIN_HTML
-<div class=ribbon2>
-<a href="../index.html">Home</a>
-</div>
-#+END_HTML
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -195,6 +197,7 @@
 #+END_HTML
 - Move the slider to increase and decrease the voltage and note what happens to the current flowing in the wire..
 - The easiest way to imagine resistance is the narrowing of the wire. If you were to imagine water flowing through a pipe, it would find it more difficult to get through a narrower pipe than a wide one.
+- Resistance has the symbol /R/ and is measured in Ohms (Ω)
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity

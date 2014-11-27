@@ -1,0 +1,153 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Resistors
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Colour Codes
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+- Resistance is measured in Ω
+- You know that the narrower the wire through which electricity passes, the more the resistance it has.
+- The most common type of resistors called /Carbon Film/ resistors are made up of a carbon tube into which a grooves have been cut. The grooves mean there is less carbon for the current to pass through, so the resistance can be increased by having a deeper groove.
+[[https://upload.wikimedia.org/wikipedia/commons/d/d4/Carbon-resistor-TR212-1.jpg]]
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Resistors are colour coded so we can tell what there resistance is.
+- Most resistors have 4 bands painted on the outside.
+http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
+- Starting at the opposite end to the Gold or Silver band (In this image that would be the right hand side):
+  - The first band gives us the first number
+  - The second band give us the second number
+  - The third band gives us the number of zeros.
+  - The fourth bands gives us the tolerance.
+| <c>    | <c>      | <c>      | <c>                   | <c>       |
+| Colour | 1st Band | 2nd Band | 3rd Band (Multiplier) | Tolerance |
+|--------+----------+----------+-----------------------+-----------|
+| Black  | 0        | 0        | 0                     |           |
+| Brown  | 1        | 1        | 1                     |           |
+| Red    | 2        | 2        | 2                     |           |
+| Orange | 3        | 3        | 3                     |           |
+| Yellow | 4        | 4        | 4                     |           |
+| Green  | 5        | 5        | 5                     |           |
+| Blue   | 6        | 6        | 6                     |           |
+| Violet | 7        | 7        | 7                     |           |
+| Gray   | 8        | 8        | 8                     |           |
+| White  | 9        | 9        | 9                     |           |
+| Gold   |          |          |                       | 5%        |
+| Silver |          |          |                       | 10%       |
+- So for example, the resistor pictured above has the colours:
+  1. Brown - 1
+  2. Black - 0
+  3. Yellow -4
+  4. Gold - +/-5%
+- This means it is a 100000Ω resistor, or what we would normally call a 100kΩ resistor.
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+
+
+#+BEGIN_HTML
+<script>
+var table = document.getElementsByTagName("table");
+console.log(table) 
+var rows = table[0].getElementsByTagName("tr");
+console.log(rows)
+var bgcolours = ['nothing','black','brown','red','orange','yellow','green','blue','violet','gray','white','gold','silver']
+var txtcolours = ['nothing','white','white','white','black','black','black','white','black','black','black','black','black']
+for(i = 1; i < rows.length; i++){           
+        rows[i].style.backgroundColor = bgcolours[i];
+        rows[i].style.color = txtcolours[i];
+
+} 
+</script>
+#+END_HTML
