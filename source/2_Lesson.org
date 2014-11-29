@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
-#+TITLE: The LED Torch - Resistors
+#+TITLE: The LED Torch - Resistors and Ohm's Law
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
@@ -91,10 +91,10 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - Resistance is measured in Ω
 - You know that the narrower the wire through which electricity passes, the more the resistance it has.
-- The most common type of resistors called /Carbon Film/ resistors are made up of a carbon tube into which a grooves have been cut. The grooves mean there is less carbon for the current to pass through, so the resistance can be increased by having a deeper groove.
+- The most common type of resistors called /Carbon Film/ resistors are made up of a carbon tube into which a grooves have been cut.
+- The grooves mean there is less carbon for the current to pass through, so the resistance can be increased by having a deeper groove.
 [[https://upload.wikimedia.org/wikipedia/commons/d/d4/Carbon-resistor-TR212-1.jpg]]
 ** Learn It
 :PROPERTIES:
@@ -129,13 +129,34 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
   3. Yellow -4
   4. Gold - +/-5%
 - This means it is a 100000Ω resistor, or what we would normally call a 100kΩ resistor.
+- The 5% tolerance means that the actual resistance can vary by + or = 5%, which in this case would be 0.05 X 100000 = 5000Ω
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- Look at the resistors in this photograph
+- For each resistor, use the colour table to identify it's resistance.
 
+* Ohm's Law
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- You've seen how increasing the resistance in a wire can effect the current passing through the wire.
+- It is therefore possible to reduce the amount of current flowing in a circuit, by adding in resistors.
+- To do this we use =Ohm's Law=
+#+BEGIN_HTML
+<math display='block'>
+<mi>V</mi>
+<mo>=</mo>
+<mi>I</mi>
+<mi>R</mi>
+</math>
+#+END_HTML
+- =V= is for Voltage, =I= for current and =R= is for resistance.
+- We can rearange the equation to make =I= the subject, which will allow us to calculate the current in a circuit.
+- Look at the animation below to see how.
 
-
+* END
 #+BEGIN_HTML
 <script>
 var table = document.getElementsByTagName("table");
