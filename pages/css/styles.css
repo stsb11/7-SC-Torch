@@ -415,4 +415,7 @@ table th {
 table td {
   border: 1px solid #a30000;
 }
-/*CSS FOR LISTS*/
+/*Maths*/
+math {
+  font-size: 200%;
+}
