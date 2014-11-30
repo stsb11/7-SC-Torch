@@ -124,13 +124,17 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 | Gold   |          |          |                       | 5%        |
 | Silver |          |          |                       | 10%       |
 - So for example, the resistor pictured above has the colours:
-  1. Brown - 1
-  2. Black - 0
-  3. Yellow -4
+  1. Brown - 1 (First number is 1)
+  2. Black - 0 (Second number is 0)
+  3. Yellow -4 (4 zeros)
   4. Gold - +/-5%
 - This means it is a 100000Ω resistor, or what we would normally call a 100kΩ resistor.
 - The 5% tolerance means that the actual resistance can vary by + or = 5%, which in this case would be 0.05 X 100000 = 5000Ω
-** Badge It
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -156,9 +160,61 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 - We can rearange the equation to make =I= the subject, which will allow us to calculate the current in a circuit.
 - Look at the animation below to see how.
 #+BEGIN_HTML
-<object data="js/Ohms_Law.html" width='600px' height='300px'></object>
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
 #+END_HTML
-* END
+- So there are three different ways of writing Ohm's Law
+#+BEGIN_HTML
+<div style="width:600; margin-left:100px">
+<math style="display:inline-block; width:33%; margin-right:100px;">
+<mi>V</mi>
+<mo>=</mo>
+<mi>I</mi>
+<mi>R</mi>
+</math>
+<math style="display:inline-block; width:33%;margin-right:100px">
+<mi>I</mi>
+<mo>=</mo>
+<mfrac>
+<mi>V</mi>
+<mi>R</mi>
+</math>
+<math style="display:inline-block"; width:33%; margin-left:100px">
+<mi>R</mi>
+<mo>=</mo>
+<mfrac>
+<mi>V</mi>
+<mi>I</mi>
+</math>
+</div>
+#+END_HTML
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Copy this table shown below
+| Voltage(V) / V | Current(I) / A | Resistance(R) / Ω |
+|----------------+----------------+-------------------|
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+|                |                |                   |
+- Look at the simple circuit detailed below.
+#+BEGIN_HTML
+<object data="js/OhmCalcs.html" width='600px' height='350px'></object>
+#+END_HTML
+- Hit the button to generate a new question. Fill in the provided values into your copy of the table and then caluclate the third value for yourself.
+
+
 #+BEGIN_HTML
 <script>
 var table = document.getElementsByTagName("table");
