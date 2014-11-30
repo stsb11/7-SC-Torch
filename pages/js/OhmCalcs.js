@@ -64,7 +64,7 @@ function getValues(){
     else{
 	showI = false;
     }
-    if(showI == true){
+/*    if(showI == true){
 	while(Current<0.01){
 	    var Resistance = resistors[floor(random(resistors.length))]*multiplier[floor(random(multiplier.length))]
 	    var Voltage = floor(random(2,24))
@@ -72,10 +72,11 @@ function getValues(){
 	}
     }
     else{
-	var Resistance = resistors[floor(random(resistors.length))]*multiplier[floor(random(multiplier.length))]
+*/
+    var Resistance = resistors[floor(random(resistors.length))]*multiplier[floor(random(multiplier.length))]
 	var Voltage = floor(random(2,24))
 	Current = Voltage/Resistance
-    }
+//    }
     if(Resistance >= 1000){
 	R = Resistance/1000 + ' k\u03A9'
     }
@@ -83,5 +84,10 @@ function getValues(){
 	R = Resistance + ' \u03A9'
     }
     V = Voltage + ' V'
-    I = Current.toFixed(3) + ' A'
+    if(Current < 0.01){
+	I = Current.toFixed(5)*1000 + ' mA'
+    }
+    else{
+	I = Current.toFixed(3) + ' A'
+    }
 }
