@@ -115,10 +115,10 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-[[https://upload.wikimedia.org/wikipedia/commons/e/e6/Resistor.jpg]]
 - Electricity is often described as a flow of electrons (tiny particles with a negative charge that you'll learn about in Science).
 - Look at the animation below to see electrons flowing through a wire.
 #+BEGIN_HTML
+</br>
 <object data="js/electrons1.html" width='600px' height='300px'></object>
 #+END_HTML
 - Probably the most important concept you need to understand about the electricity is Potential Difference, which we often call the Voltage.
@@ -131,6 +131,7 @@
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
+</br>
 <object data="js/electrons2.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the voltage acting across the wire.
@@ -161,6 +162,7 @@
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
+</br?
 <object data="js/electrons3.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the voltage and note what happens to the current flowing in the wire..
@@ -193,6 +195,7 @@
 :HTML_CONTAINER_CLASS: try
 :END:
 #+BEGIN_HTML
+</br>
 <object data="js/electrons4.html" width='600px' height='300px'></object>
 #+END_HTML
 - Move the slider to increase and decrease the resistance and note what happens to the current flowing in the wire..
