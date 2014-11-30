@@ -155,7 +155,9 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 - =V= is for Voltage, =I= for current and =R= is for resistance.
 - We can rearange the equation to make =I= the subject, which will allow us to calculate the current in a circuit.
 - Look at the animation below to see how.
-
+#+BEGIN_HTML
+<object data="js/Ohms_Law.html" width='600px' height='300px'></object>
+#+END_HTML
 * END
 #+BEGIN_HTML
 <script>
