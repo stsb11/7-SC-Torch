@@ -213,6 +213,7 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 <object data="js/OhmCalcs.html" width='600px' height='350px'></object>
 #+END_HTML
 - Hit the button to generate a new question. Fill in the provided values into your copy of the table and then caluclate the third value for yourself.
+- Sometimes the current is described in =mA=. This is short for milliamps, which are a thousandth of an amp. (Just divide it by 1000 to calculate the current in amps)
 
 
 #+BEGIN_HTML
