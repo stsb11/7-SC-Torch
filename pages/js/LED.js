@@ -9,49 +9,36 @@ var Thickness = 100;
 photons = []
 
 function setup(){
-    frameRate = 30
+    frameRate = 30;
     colorMode(RGB, 255)
     red = color(255,0,0);
     green = color(0,255,0);
     blue = color(125, 249, 255)
+    yellow = color(255,255,0);
     white = color(255)
-    createCanvas(600,300);
+    createCanvas(800,500);
     //Set up points for LED
-    Points.push(new Point(0,150,0),
-		new Point(100,150,0),
-		new Point(100,100,4),
-		new Point(500,100,3),
-		new Point(500,150,2),
-		new Point(600,150,1),
-		
-		new Point(0,150,0),
-		new Point(100,150,0),
-		new Point(100,200,0),
-		new Point(500,200,0),
-		new Point(500,150,0),
-		new Point(600,150,0)
+    Points.push(new Point(width/2-150,height/2-50,0),
+		new Point(width/2+150,height/2-50,0),
+		new Point(width/2+150,height/2+50,0),
+		new Point(width/2-150,height/2+50,0)
 	       );
     //Set up lines for LED
     Lines.push(new Line(Points[0],Points[1]),
  	       new Line(Points[1],Points[2]),
 	       new Line(Points[2],Points[3]),
-	       new Line(Points[3],Points[4]),
-	       new Line(Points[4],Points[5]),
-	       new Line(Points[6],Points[7]),
- 	       new Line(Points[7],Points[8]),
-	       new Line(Points[8],Points[9]),
-	       new Line(Points[9],Points[10]),
-	       new Line(Points[10],Points[11])
-	      );
+	       new Line(Points[3],Points[0])
+
+ 	      );
     
     //Add an electron emitter
-    electronEmitter = new Emitter(495,150,blue,-voltage,-1);
+    electronEmitter = new Emitter(Points[1].position.x-5,height/2,blue,-voltage,-1);
     for(var i = 0;i<50;i++){
 	electronEmitter.addParticle();
     }
 
     //Add a hole emitter
-    holeEmitter = new Emitter(105,150,red,voltage,+1);
+    holeEmitter = new Emitter(Points[0].position.x+5,height/2,red,voltage,+1);
     for(var i = 0;i<50;i++){
 	holeEmitter.addParticle();
     }
@@ -59,38 +46,52 @@ function setup(){
 
     //Fill the area with particles to start with
     for(var i = 0;i<50;i++){
-	electronEmitter.particles[i].position = createVector(random(300,480),random(110,190))
-	electronEmitter.particles[i].velocity = createVector(0,random(-0.5,0.5))
-	holeEmitter.particles[i].position = createVector(random(120,300),random(110,190))
-	holeEmitter.particles[i].velocity = createVector(0,random(-0.5,0.5))
+	electronEmitter.particles[i].position = createVector(random(Points[1].position.x-5,width/2),random(Points[0].position.y+10,Points[2].position.y-10));
+	electronEmitter.particles[i].velocity = createVector(0,random(-0.5,0.5));
+	holeEmitter.particles[i].position = createVector(random(Points[0].position.x+5,width/2),random(Points[0].position.y+10,Points[2].position.y-10));
+	holeEmitter.particles[i].velocity = createVector(0,random(-0.5,0.5));
     }
 
     //Button
     var polarity = createButton('Polarity')
-    polarity.position(300,280)
+    polarity.position(width/2-40,height-30)
     polarity.mousePressed(reversePolarity)
 }
 
 function draw(){
     
     background(50);
+    //Non Interactive Elements
     
+    fill(255,0,0,photons.length*5)
+    arc(width/2, height/2, 410, 410, QUARTER_PI/2, PI+HALF_PI+QUARTER_PI+QUARTER_PI/2, CHORD);
+   // ellipse(width/2,height/2,410,410)
+    fill(125,125,125)
+    rect(Points[0].position.x,height/2+10,-200,-10)
+    rect(Points[1].position.x,height/2+10,+150,-10)
+    fill(50,255,0,100);
+    rect(Points[0].position.x,Points[0].position.y,150,100);
+    fill(50,0,255,100);
+    rect(Points[1].position.x,Points[1].position.y,-150,100);
     //START TEXT//
     textSize(18);
     textAlign(CENTER)
     stroke(white)
     fill(white)
+    text('ANODE (+ve)',100,height/2)
+    text('CATHODE (-ve)',width-100,height/2)
     //END TEXT//
 
     //Display the points
     for(var i = 0;i < Points.length;i++){
 	Points[i].display(white);
     }
-    //Display the lines
+    //Display the lines for collision
+    strokeWeight(3)
     for(var i = 0; i < Lines.length; i++){
 	Lines[i].display(white);
     }
-    
+    strokeWeight(1)
     electronEmitter.run();
     holeEmitter.run();
 
@@ -101,7 +102,7 @@ function draw(){
     for(var i = photons.length-1; i > 0; i--){
 	photons[i].update()
 	photons[i].display()
-	if(photons[i].position.x < 0 || photons[i].position.x > 600  || photons[i].position.y > 300 || photons[i].position.y < 0){
+	if(photons[i].position.x < 0 || photons[i].position.x > width  || photons[i].position.y > height || photons[i].position.y < 0){
 	    photons.splice(i,1);
 	}
     }
@@ -208,15 +209,15 @@ Particle.prototype.display = function(){
 //Method to kill particles
 Particle.prototype.isDead = function(){
     var isDead;
-    if(this.position.x > width || this.position.x < 0  || this.position.y > 200 || this.position.y < 100){
-	isDead = true
+    if(this.position.x > Points[1].position.x || this.position.x < Points[0].position.x  || this.position.y > Points[3].position.y || this.position.y < Points[0].position.y){
+	isDead = true	
     }
     return isDead
 }
 
 //Method to check possible collision
 Particle.prototype.possCollision = function(){
-    if(this.colour == green){
+    if(this.colour == yellow){
 	return;
     }
     for(var i = 0; i < Lines.length; i++){
@@ -308,25 +309,42 @@ function mouseReleased(){
 function destroy(){
     for(var i = electronEmitter.particles.length -1; i >= 0; i--){
 	for(var j = holeEmitter.particles.length -1; j >= 0; j--){
-	    if(electronEmitter.particles[i].position.x < holeEmitter.particles[j].position.x + 10 &&
-	       electronEmitter.particles[i].position.x > holeEmitter.particles[j].position.x - 10 &&
-	       electronEmitter.particles[j].position.y < holeEmitter.particles[j].position.y + 10 &&
-	       electronEmitter.particles[j].position.y > holeEmitter.particles[j].position.y - 10){
-		photons.push(new Particle(electronEmitter.particles[i].position,green,0,0))
+	    if(electronEmitter.particles[i].position.x < holeEmitter.particles[j].position.x + 15 &&
+	       electronEmitter.particles[i].position.x > holeEmitter.particles[j].position.x - 15 &&
+	       electronEmitter.particles[j].position.y < holeEmitter.particles[j].position.y + 15 &&
+	       electronEmitter.particles[j].position.y > holeEmitter.particles[j].position.y - 15){
+		photons.push(new Particle(electronEmitter.particles[i].position,yellow,0,0))
 		photons[photons.length - 1].velocity.x=0;
 		photons[photons.length - 1].velocity.y=10;
 		if(photons.length % 2 == 0){
 		    photons[photons.length - 1].velocity.y=-10;
 		}
-		photons[photons.length - 1].radius=1; 
+		photons[photons.length - 1].radius=2; 
 		electronEmitter.particles.splice(i,1);
 		holeEmitter.particles.splice(j,1);
 		electronEmitter.addParticle();
 		holeEmitter.addParticle();
+		fill(255,255,0)
+		star(electronEmitter.particles[i].position.x,electronEmitter.particles[i].position.y, 5, 10, 5); 
+//		ellipse(electronEmitter.particles[i].position.x,electronEmitter.particles[i].position.y,30,30)
 	    }
 	}
     }
 }
 function reversePolarity(){
     voltage = -voltage
+}
+function star(x, y, radius1, radius2, npoints) {
+  var angle = TWO_PI / npoints;
+  var halfAngle = angle/2.0;
+  beginShape();
+  for (var a = 0; a < TWO_PI; a += angle) {
+    var sx = x + cos(a) * radius2;
+    var sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a+halfAngle) * radius1;
+    sy = y + sin(a+halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+    endShape(CLOSE);
 }

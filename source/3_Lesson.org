@@ -97,8 +97,9 @@
 #+BEGIN_QUOTE
 On October 7, 2014, the Nobel Prize in Physics was awarded to Isamu Akasaki, Hiroshi Amano and Shuji Nakamura for "the invention of efficient blue light-emitting diodes which has enabled bright and energy-saving white light sources" or, less formally, LED lamps.
 #+END_QUOTE
-
-<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
