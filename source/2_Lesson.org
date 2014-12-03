@@ -1,6 +1,8 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <link type="text/css" href="css/magnifier.css" rel="stylesheet">
+#+HTML_HEAD_EXTRA: <script type="text/javascript" src="js/magnifier.js"></script>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
 #+TITLE: The LED Torch - Resistors and Ohm's Law
 #+AUTHOR: Marc Scott
@@ -133,13 +135,19 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
-:END:
+:END:ceho
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-[[file:img/resistors.jpg]]
-- Look at the resistors in this photograph
+- Look at the resistors in this photograph. You can magnify them by hovering with your mouse cursor.
+#+BEGIN_HTML
+<div class="magnifier" style="width: 610px; height: 410px;margin-left:auto;margin-right:auto;border-radius: 10px;">
+  <div class="maglens">
+    <img src="img/resistors.jpg" class="maglarge" style="width: 1830px; height: 1230px;" />
+  </div>
+</div>
+#+END_HTML
 - For each resistor, use the colour table to identify it's resistance.
 * Ohm's Law
 :PROPERTIES:

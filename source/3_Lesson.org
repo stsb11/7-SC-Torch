@@ -17,8 +17,6 @@
         </div>
     </div>
 #+END_HTML
-
-
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -110,8 +108,8 @@ On October 7, 2014, the Nobel Prize in Physics was awarded to Isamu Akasaki, Hir
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
-https://commons.wikimedia.org/wiki/File:LED,_5mm,_green_%28en%29.svg
+- Look at the diagram of the LED below
+[[file:img/LED-diagram.png]]
 - LEDs can only be placed in a circuit one way round. (You'll learn why in a bit).
 - They have one leg that is the cathode and another that is the anode.
 - There are several ways to recognise which side of the LED is which.
@@ -126,14 +124,12 @@ https://commons.wikimedia.org/wiki/File:LED,_5mm,_green_%28en%29.svg
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It- Silver
+** Badge It- Silver 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
-
 - Find an LED and take a photo of it using your phone or tablet (or your teacher's). Make sure you get a close up.
-- Use a graphics package to try and label the photo, like the diagram aboce.
+- Use a graphics package to try and label the photo, like the diagram above.
 * How LEDs work
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -142,7 +138,6 @@ https://commons.wikimedia.org/wiki/File:LED,_5mm,_green_%28en%29.svg
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
 - LEDs contain two different types of material, one that carries positive charges called /=holes=/ and one that carries negative chatges - the electrons we met in the last lesson.
 - The holes try to flow from the anode towards the cathode.
 - The electrons try to flow from the cathode to the anode.
@@ -150,13 +145,58 @@ https://commons.wikimedia.org/wiki/File:LED,_5mm,_green_%28en%29.svg
 - If an electron and a hole meet each other, they produce a particle of light.
 #+BEGIN_HTML
 <object data="js/LED.html" width='800px' height='500px'></object>
-#+END_HTML
+#+END_HTML 
 - The animation should show you why LEDs can only be used one way around.
 - Try hitting the /=polarity=/ button to reverse the way the LED is connected.
 - You should see that the charges are stuck at either end, and therefore no current is flowing, and no light is emitted.
-** Research It
+* Assessment
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: research
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- The symbol for an LED is shown below.
+[[file:img/LED_symbol.png]]
+- In your own words, and using screenshots of the animation above, try and explain why the symbol is drawn in this way.
+- Be sure to include the following points:
+  - What is meant by anode and cathode
+  - Why there are two arrows pointing away from the LED
+  - Why the symbol looks like an /arrow/ with a vertical bar infront of it.
+- To get your Gold badge you must provide a clear explanation and use correct spelling and grammar.
+* Protecting your LEDs
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- You've seen that LEDs and resistors both allow charges to flow through them. You also know that resistors limit the current that flows through them.
+- LEDs are different though, they have an all or nothing approach to electric current. In one direction _no_ current can flow, while in the other direction they'll more or less allow all the current that can be provided by the power supply to flow through them.
+- This can be a problem. At high currents there are lots of collisions going on inside the LED, and this produces a lot of heat. This can cause the LED to =burnout= or even =explode=
+#+BEGIN_HTML
+ <video width="610"  controls>
+  <source src="img/LEDexp.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+#+END_HTML 
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
 :END:
 
-- 
+- To protect our LEDs we always put them in series with a resistor, to ensure we are limiting the current flowing through them.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Use Circuit Wizard to create a circuit containing an LED and a 9V power supply.
+- Ensure that explosions are turned on and run the simulation
+- Now add a resistor to the circuit and see what happens.
+- Use screenshots of your simulation to explain why we need resistors in our LED circuits.
