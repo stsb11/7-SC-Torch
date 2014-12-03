@@ -23,6 +23,9 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -87,6 +90,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+[[https://upload.wikimedia.org/wikipedia/commons/9/9e/Verschiedene_LEDs.jpg]]
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -97,62 +101,62 @@
 #+BEGIN_QUOTE
 On October 7, 2014, the Nobel Prize in Physics was awarded to Isamu Akasaki, Hiroshi Amano and Shuji Nakamura for "the invention of efficient blue light-emitting diodes which has enabled bright and energy-saving white light sources" or, less formally, LED lamps.
 #+END_QUOTE
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- Find out how many different colours of LED there are. Try and find a picture to illustrate this.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+https://commons.wikimedia.org/wiki/File:LED,_5mm,_green_%28en%29.svg
+- LEDs can only be placed in a circuit one way round. (You'll learn why in a bit).
+- They have one leg that is the cathode and another that is the anode.
+- There are several ways to recognise which side of the LED is which.
+| Anode                | Cathode               |
+|----------------------+-----------------------|
+| positive(+)          | negative(-)           |
+| rounded edge         | flat edge             |
+| longest leg          | shortest leg          |
+| small triangle(post) | large triangle(anvil) |
+- Compare this list to the diagram above, so you know what the parts are.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It- Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+
+- Find an LED and take a photo of it using your phone or tablet (or your teacher's). Make sure you get a close up.
+- Use a graphics package to try and label the photo, like the diagram aboce.
+* How LEDs work
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+- LEDs contain two different types of material, one that carries positive charges called /=holes=/ and one that carries negative chatges - the electrons we met in the last lesson.
+- The holes try to flow from the anode towards the cathode.
+- The electrons try to flow from the cathode to the anode.
+- This flow of charges means that current is flowing through the LED.
+- If an electron and a hole meet each other, they produce a particle of light.
 #+BEGIN_HTML
 <object data="js/LED.html" width='800px' height='500px'></object>
 #+END_HTML
+- The animation should show you why LEDs can only be used one way around.
+- Try hitting the /=polarity=/ button to reverse the way the LED is connected.
+- You should see that the charges are stuck at either end, and therefore no current is flowing, and no light is emitted.
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
 
-** Design It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: design
-:END:
-
-** Build It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: build
-:END:
-
-** Test It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: test
-:END:
-
-** Run It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: run
-:END:
-
-** Document It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: document
-:END:
-
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-
-** Program It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: program
-:END:
-
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-
-** Badge It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-
-** Save It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: save
-:END:
-
-
+- 

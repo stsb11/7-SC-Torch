@@ -11,7 +11,7 @@ function setup(){
     green = color(0,255,0);
     blue = color(125, 249, 255)
     white = color(255)
-    createCanvas(400,200);
+    createCanvas(500,300);
     V1 = new symbol('V',100,100,255)
     equals = new symbol('=',150,100,255)
     I1 = new symbol('I',210,100,255)

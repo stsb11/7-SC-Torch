@@ -138,9 +138,9 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+[[file:img/resistors.jpg]]
 - Look at the resistors in this photograph
 - For each resistor, use the colour table to identify it's resistance.
-
 * Ohm's Law
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -160,7 +160,7 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 - We can rearange the equation to make =I= the subject, which will allow us to calculate the current in a circuit.
 - Look at the animation below to see how.
 #+BEGIN_HTML
-<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+<object data="js/Ohms_Law.html" width='500px' height='300px'></object>
 #+END_HTML
 - So there are three different ways of writing Ohm's Law
 #+BEGIN_HTML
