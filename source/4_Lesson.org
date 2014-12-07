@@ -1,0 +1,184 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Circuit Design
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Using Circuit Wizard
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- We're now going to deign our LED Torch.
+- The first thing we'll need to do is design a circuit and a PCB. To do this we use a program called /Circuit Wizard/.
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+- Find the Circuit Wizard application and open it.
+- Click on File in the menu bar and then New from the context menu.
+- Choose =Circuit with GENIE Flowchart= from the dialogue box and click OK.
+[[file:img/CW1.png]]
+- On the far right of the screen you'll see a gallery of components you can use.
+[[file:img/CW2.png]]
+- Choose =Power Supplies= and then find the symbol for a =Cell=
+file:img/CW3.png
+- Drag a single Cell onto the page, and then another one.
+- You should arrange them so that they are connected together.
+file:img/CW4.png
+- When we connect up cells in this way, we are making a battery. Our LED Torch will be powered by 2 1.5V Cells, giving us a total Voltage of 3V.
+- Next we need an LED. In the Gallery, find the Light Emitting Diodes.
+file:img/CW5.png
+- Drag an LED onto your page and rotate.
+file:img/CW6.png
+- Now we need to connect up the LED to the cells.
+- You can do this by clicking and dragging on the end points of the LED, to create a wire.
+file:img/CW7.png
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+- It's up to you to finish the circuit now.
+- You'll need to put in a =Push To Make= switch and a resistor, and then connect it back up to the cells.
+- It should look like this when you are finished.
+file:img/CW8.png
+- You'll need to change the resistor value to 3Ω. To do this, double click on the resistor to reveal it's properties. Make sure it's not 3kΩ
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+- Let's try out our circuit.
+- In the tool bar at the top of the screen is a play button.
+file:img/CW9.png
+- Click the button and then test out your circuit by pushing the switch.
+- Now let's make it more realistic.
+- From the menu choose Project --> Simulation and turn on explosions.
+- Now run your circuit and see what happens.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+- In your own words, explain what happend when you simulated the circuit.
+- Describe how you could make sure this doesn't happen.
+* Using Circuit Wizard
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Different LEDs can take larger currents than others.
+- Change your resistor back to 3Ω if you altered it, and double click the LED and change it to a =White= LED.
+- Now simulate the circuit and you should see that everything works as expected.
+* Designing a PCB
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- A PCB is a Printed Circuit Board. This is a laminate material with copper printed on the surface that allows current to flow through it.
+- The PCB you'll be using in your LED Torch looks like this
+file:img/PCB1.jpg
+file:img/PCB2.jpg
+- Let's use Circuit Wizard to design the PCB
+- Click on the icon shown in the toolbar to start the PCB wizard.
+[[file:img/PCB/PCB3.png]]
+- Click on Next
+file:img/PCB/PCB3.png
+- Choose the option =Single-Sided; Thin Tacks= and don't forget to uncheck the tick box at the bottom.
+file:img/PCB/PCB4.png
+- 

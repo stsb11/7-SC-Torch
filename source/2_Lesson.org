@@ -135,7 +135,7 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
-:END:ceho
+:END:
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -144,7 +144,7 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 #+BEGIN_HTML
 <div class="magnifier" style="width: 610px; height: 410px;margin-left:auto;margin-right:auto;border-radius: 10px;">
   <div class="maglens">
-    <img src="img/resistors.jpg" class="maglarge" style="width: 1830px; height: 1230px;" />
+    <img src="img/resistors.jpg" class="maglarge" style="width: 1830px; height: 1230px;max-width:4000px" />
   </div>
 </div>
 #+END_HTML
@@ -222,8 +222,6 @@ http://upload.wikimedia.org/wikipedia/commons/a/ac/Resistor.JPG
 #+END_HTML
 - Hit the button to generate a new question. Fill in the provided values into your copy of the table and then caluclate the third value for yourself.
 - Sometimes the current is described in =mA=. This is short for milliamps, which are a thousandth of an amp. (Just divide it by 1000 to calculate the current in amps)
-
-
 #+BEGIN_HTML
 <script>
 var table = document.getElementsByTagName("table");
