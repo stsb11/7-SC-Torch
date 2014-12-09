@@ -22,8 +22,19 @@
 * [[file:pages/3_Lesson.html][Week 3 - LEDS]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
-:END:
-* [[file:pages/TeacherSlides.html][Teacher Slides]]
+:END:      
+* [[file:pages/3_Lesson.html][Week 4 - Circuit Design]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:      
+* [[file:pages/3_Lesson.html][Week 5 - Soldering]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:    
+* [[file:pages/3_Lesson.html][Week 6 - Assembling the Housing]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END::END:* [[file:pages/TeacherSlides.html][Teacher Slides]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
