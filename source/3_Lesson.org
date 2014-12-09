@@ -186,7 +186,6 @@ Your browser does not support the video tag.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - To protect our LEDs we always put them in series with a resistor, to ensure we are limiting the current flowing through them.
 * Assessment
 :PROPERTIES:
@@ -196,6 +195,7 @@ Your browser does not support the video tag.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- *Note* - /You should complete the Lesson on Circuit Design before coming back to try this badge/
 - Use Circuit Wizard to create a circuit containing an LED and a 9V power supply.
 - Ensure that explosions are turned on and run the simulation
 - Now add a resistor to the circuit and see what happens.
