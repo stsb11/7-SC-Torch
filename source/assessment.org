@@ -6,9 +6,16 @@
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
-<div class=ribbon>
-<a href="https://github.com/MarcScott/7-CS-lolcats">Fork me on GitHub</a>
-</div>
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
 #+END_HTML
 
 * COMMENT Use as a template
