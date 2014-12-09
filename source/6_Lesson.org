@@ -1,0 +1,135 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Assembling the Housing
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Preparation
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+- Assembly of your torch should take around an hour.
+- First ensure you have all the correct parts for the housing.
+file:img/Build15a.jpg
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+- Take the acrylic piece with the square hole in the top.
+- Lay it flat on a workbench exactly as shown below and then use a countersink cutter to create countersinks where the 3mm holes are in each corner.
+- Keep testing your countersinks using the 3mm machine screws, to ensure you have countersinks deep enough that the head of the screw is flush to the acrylic.
+file:img/Build15b.jpg
+- Now place your finsished PCB, so that it sits neatly on the acrylic part. The PTM switch should fit throught the square hole.
+file:img/Build15.jpg
+- Take the acrylic part with the grooves cut through to where the cells will sit. Put it in place and ensure that _all_ the holes align.
+file:img/Build16.jpg
+- Take the next acrylic part and again make sure the whole align.
+file:img/Build17.jpg
+- Next you need to put your cells into the housing. Make sure you put them in the correct way around, as shown below.
+file:img/Build18.jpg
+- You'll now need some copper tape, to connect the two cells.Peel off the paper layer and then fold the tape so that it looks like the image below.
+file:img/Build19.jpg
+- Then stick it to the cells as shown.
+file:img/Build20.jpg
+- To finish off, use 3x12mm machine screws to fix the last piece in place and hold your torch together.
+file:img/Build21.jpg
+- Test your torch.
+file:img/Build22.jpg
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Once you have completed your board, take it to your teacher to show them it working.
+- Take pictures of your torch from three different angles, including at least one where the LED lights up.
+- You will be assessed on the quality of your build.
+
