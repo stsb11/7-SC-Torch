@@ -1,0 +1,157 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Soldering the board
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Preparation
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+- Soldering the board together should be a fairly quick process, and so long as you have no issues, it shouldn't take more than an hour.
+- Firstly you'll need to make sure you have all the correct components.
+- You will need:
+  1. 2 x 1.5V Cells
+  2. 1 x 3Ω resistor
+  3. 1 x Any resistor
+  4. 1 x 3mm White LED
+  5. 1 x 6mm PTM Switch
+  6. 2 x 5cm lengths of single core wire (any colour)
+file:img/Build01.jpg
+- The board is clearly labelled, to show you where everything is placed.
+- This is the side where the components sit.
+file:img/Build02.jpg
+- This is the side where you apply the solder
+file:img/Build03.jpg
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+- Place you resistors on the board as shown below.
+file:img/Build04.jpg
+- Then use some small strips of masking tape to hold them in place.
+file:img/Build05.jpg
+- Clamp your board into the bulldog-clip on your soldering iron stand, and make the legs of your resistors stand up as straight as possible.
+file:img/Build05b.jpg
+- Then carefully solder each leg in place.
+  1. Hold the tip of the iron so that it is touching both the solder pad and the leg of the component.
+  2. Hold it there for the count of three.
+  3. Feed in the solder so that it melts over the pad and leg.
+  4. Withdraw the solder.
+  5. Withdraw the iron.
+  6. Use side cutters to trim off the legs.
+- Your solder joints should look like this.
+file:img/Build06.jpg
+- Next we need to solder in the LED. Make sure you put it in your board the correct way around. The long leg goes through the hole marked with a =+=.
+file:img/Build07.jpg
+- When you place the LED into the holes, bend it over so that the bottom of the LED touches the edge of the board.
+file:img/Build08.jpg
+- You may want to use masking tape again, if you feel you need to. Solder the LED in place.
+file:img/Build09.jpg
+- Next take your lengths of single-core wire and strip off the insulating plastic as shown below.
+file:img/Build10.jpg
+- Now solder the wire into the board as shown.
+file:img/Build11.jpg
+- Next, use a screw driver to coil the bare wire.
+file:img/Build12.jpg
+- Our last component is the PTM switch. Use masking tape to keep it in place.
+file:img/Build13.jpg
+- Then solder it into the board.
+file:img/Build14.jpg
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Once you have completed your board, take pictures of both the solder side and the component side.
+- You will be assessed on the quality of your soldering and component placement.
+

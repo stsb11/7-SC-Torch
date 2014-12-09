@@ -144,12 +144,11 @@ file:img/CW9.png
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It
+** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
-- In your own words, explain what happend when you simulated the circuit.
+- In your own words, explain what happened when you simulated the circuit.
 - Describe how you could make sure this doesn't happen.
 * Using Circuit Wizard
 :PROPERTIES:
@@ -162,7 +161,7 @@ file:img/CW9.png
 - Different LEDs can take larger currents than others.
 - Change your resistor back to 3Ω if you altered it, and double click the LED and change it to a =White= LED.
 - Now simulate the circuit and you should see that everything works as expected.
-* Designing a PCB
+* Preparing to design a PCB
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -170,7 +169,7 @@ file:img/CW9.png
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- A PCB is a Printed Circuit Board. This is a laminate material with copper printed on the surface that allows current to flow through it.
+- A PCB is a Printed Circuit Board. This is a laminate material with copper printed on the surface. Because the copper parts are metal they allow electric current to flow through them.
 - The PCB you'll be using in your LED Torch looks like this
 file:img/PCB1.jpg
 file:img/PCB2.jpg
@@ -178,7 +177,60 @@ file:img/PCB2.jpg
 - Click on the icon shown in the toolbar to start the PCB wizard.
 [[file:img/PCB/PCB3.png]]
 - Click on Next
-file:img/PCB/PCB3.png
-- Choose the option =Single-Sided; Thin Tacks= and don't forget to uncheck the tick box at the bottom.
 file:img/PCB/PCB4.png
-- 
+- Choose the option =Single-Sided; Thin Tacks= and don't forget to check the tick box at the bottom, so we can customise the layout
+file:img/PCB/PCB5.png
+- We now get to choose the size of the board, but we can edit this later so let's simply click on =Next=
+file:img/PCB/PCB6.png
+- On the next screen we can customise the types of components we get to use.
+file:img/PCB/PCB7.png
+- Uncheck the Terminal Blocks and then double click on the switch and choose the =6x6 Push to make switch= from the options provided. Then you can click =Next=
+file:img/PCB/PCB8.png
+- Next you can choose the types of copper pads you want to use by default. We're best off going for Standard sized pads, to help use keep our soldering neat.
+file:img/PCB/PCB9.png
+- The next screen allows us to decide if we want Circuit Wizard to place components for us. This can be useful sometimes, but most of the time, it won't do as nice a job as a human can. Uncheck the box and click =Next=.
+file:img/PCB/PCB10.png
+-The last screen prompts us to =Convert= our circuit, so go ahead and click it.
+file:img/PCB/PCB11.png
+* Designing a PCB
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Your PCB should look something like this.
+file:img/PCB/PCB12.png
+- Place your components on the board, so it looks something like this.
+file:img/PCB/PCB13.png
+- Now we need to place some pads on the board, so that we can connect up our cells.
+- Select the pad icon from the toolbar.
+file:img/PCB/PCB14.png
+- Place pad close to the bottom of the switch as shown below.
+file:img/PCB/PCB15.png
+- Now we'll need to connect up our components. Choose the tracks icon from the toolbar.
+file:img/PCB/PCB16.png
+- Now draw on the tracks as shown below.
+file:img/PCB/PCB17.png
+- The PCB would work as it is, but we're going to make a few modifications to help us out when it comes to soldering and assembling the torch.
+- Firstly we're going to add in a second resistor. This won't have any current flowing through it, but it will help to keep our board flat when it is in the case.
+- Find the resistors from the component menu and place it to the right of the switch.
+file:img/PCB/PCB18.png
+- We can finish off by adding a few extra tracks in. These help make sure that our pads are secured to the surface of the PCB and are less likely to lift off when we solder them.
+- Lastly we can re-size out board, so that we don't waste material.
+file:img/PCB/PCB20.png
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- The design of the digital torch PCB is by no means the absolute correct way of laying out the components.
+- See if you can come up with your own design for the PCB.
+- The smaller you can make the board, the happier your budget will be.
