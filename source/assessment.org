@@ -1,7 +1,7 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  toc:nil
 #+TITLE: Assessment
 #+AUTHOR: Marc Scott
 
@@ -83,10 +83,12 @@
 :HTML_CONTAINER_CLASS: document
 :END:
 - Below guidance has been provided for the award of badges.
-| <20>                 | <20>                 | <20>                 | <20>                 |
-| Criteria             | Silver               | Gold                 | Platinum             |
-|----------------------+----------------------+----------------------+----------------------|
-| Sparky               | Understand the particle nature of current | Understand the relationship between Potential Difference and Current | Understand the relationship between resistance and current |
-| Ohm-e Ohm-y          | Identify resistors by colour codes | Use Ohm's law        |                      |
-| LEDs                 | Identify parts of an LED | Explain how an LED works | Simulate LEDs in a circuit |
-|                      |                      |                      |                      |
+| <40>                                     | <40>                                     | <40>                                     | <40>                                     |
+| Criteria                                 | Silver                                   | Gold                                     | Platinum                                 |
+|------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
+| Fundamentals of Electricity              | Understand how voltage effects charged particles of charge | Understand the relationship between Voltage and Currentence and Current | Understand the relationship between Current, Voltage and Resistance |
+| Resistors and Ohms's Law                 | Identify resistors by colour codes       | Use Ohm's law                            |                                          |
+| LEDs                                     | Identify parts of an LED                 | Explain how the LED symbol relates to real LEDs | Simulate LEDs in a circuit               |
+| Circuit Design                           | Understand the need to protect LEDs      | Independently design a PCB               |                                          |
+| Soldering                                | Solder a working PCB                     | Solder a working PCB with neat component placement | Solder a working PCB with neat componenet placement and perfect solder joints |
+| Assembly                                 | Assemble a working Torch                 | Assemble a working torch with perfect counter sinks | Assemble a working torch with perfects counter sinks and a polished finish |
