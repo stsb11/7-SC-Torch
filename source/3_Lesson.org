@@ -138,7 +138,7 @@ On October 7, 2014, the Nobel Prize in Physics was awarded to Isamu Akasaki, Hir
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- LEDs contain two different types of material, one that carries positive charges called /=holes=/ and one that carries negative chatges - the electrons we met in the last lesson.
+- LEDs contain two different types of material, one that carries positive charges called /=holes=/ and one that carries negative charges - the electrons we met in the last lesson.
 - The holes try to flow from the anode towards the cathode.
 - The electrons try to flow from the cathode to the anode.
 - This flow of charges means that current is flowing through the LED.
