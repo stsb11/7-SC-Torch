@@ -32,11 +32,11 @@ function setup(){
     reset.position(180,180)
     reset.mousePressed(resetMaths)
 
-    Isub = createButton('Make I the subject')
+    Isub = createButton('Make R the subject')
     Isub.position(260,180)
     Isub.mousePressed(ItheSubject)
 
-    Rsub = createButton('Make R the subject')
+    Rsub = createButton('Make I the subject')
     Rsub.position(25,180)
     Rsub.mousePressed(RtheSubject)
 
