@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
-#+TITLE: The LED Torch - How and LED works
+#+TITLE: The LED Torch - How an LED works
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
