@@ -1,0 +1,167 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Extension Activity
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Extension Work
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Introduction
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- If you excel at Systems & Control, you might find yourself finishing your LED Torch well before your peers.
+- The following Extension activity will allow you to learn some new engineering skills and to practice your modelling skills.
+- There will be no badges awarded for this activity. The rewards is the work itself.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- For this task, you're going to learn how to accurately measure the dimensions of the LED torch housing.
+- Once you have the dimensions, you can then have a go at creating the parts in SolidWorks and making the housing as an assembly.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- If we need to measure the width of a part, there are several tools we could use.
+- The simplest tool would be a ruler
+[[file:https://upload.wikimedia.org/wikipedia/commons/8/86/Steel_ruler_closeup.jpg]]
+- The problem with a ruler, is it's accuracy.
+- You could measure an object and know it was between 52mm and 53mm in length, but your best guess could only be 52.5mm
+- To be able to measure lengths smaller than a millimeter, we need to use another device.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- These are Vernier Callipers
+file:https://upload.wikimedia.org/wikipedia/commons/9/94/Messschieber.jpg
+- Vernier Callipers allow us to measure lengths to the nearest 0.1mm (or sometimes even smaller).
+- They use a scale called a Vernier Scale. Ask your teacher for a pair of Vernier Callipers, so you can learn how to use them.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Here is an animation showing how to use the Vernier Scale.
+file:https://upload.wikimedia.org/wikipedia/commons/a/a0/Vernier_scale_Direct_vernier.gif
+- The basic concept is to match up the marks on the two scales, to determine the number of 0.1mm increments to add to your initial reading.
+- Let's have a go at doing this with the LED Torch housing.
+- Grab one of the parts for the LED torch
+-Adjust the Vernier Callipers so that the jaws fit tightly around the part, as shown below.
+[[file:img/callipers.jpg]]
+3. The scale is fairly simple to read - have a look at this close up.
+[[file:img/Scale.jpg]]
+- Hopefully you can see in the picture above, that the part is greater than 3cm in length.
+- If you look to where the first graduation of the _bottom_ scale meets the _top_ scale, you'll be able to see that we can more accurately describe the part as being 3.4cm in length.
+[[file:img/Scale2.png]]
+- Now we look across at the bottom scale, and see which of the graduations most closely lines up with the upper scale's graduations
+[[file:img/Scale3.png]]
+- Here we can see that the ninth graduation is the one that matches, so that makes the dimension 3.49cm, or 34.9mm
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- If you look at the animation below, you can see the whole process of measuring using Vernier Calipers
+file:https://upload.wikimedia.org/wikipedia/commons/c/c2/Using_the_caliper_new_en.gif
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- We can also use the Vernier Callipers to measure the size of holes in the part.
+- Look at the image below, showing how to measure the square hole in the top of the drawer alarm.
+[[file:img/VC2.jpg]]
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- On paper, sketch rough diagrams of all the parts for the LED torch housing.
+- Now use Vernier Callipers to measure all the dimensions of the parts. (The small holes have a 3mm diameter)
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+- You've used SolidWorks before, so this shouldn't be too difficult for you.
+- Using SolidWorks, create sketches of all the parts.
+- Extrude each part by 3mm
+- Create an assembly of the four parts.
