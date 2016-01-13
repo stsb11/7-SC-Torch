@@ -96,13 +96,13 @@
 - Soldering the board together should be a fairly quick process, and so long as you have no issues, it shouldn't take more than an hour.
 - Firstly you'll need to make sure you have all the correct components.
 - You will need:
-  1. 2 x 1.5V Cells
+  1. 1 x 3V Cells
   2. 1 x 3Ω resistor
   3. 1 x Any resistor
   4. 1 x 3mm White LED
   5. 1 x 6mm PTM Switch
   6. 2 x 5cm lengths of single core wire (any colour)
-file:img/Build01.jpg
+[[./img/Components.jpg]]
 - The board is clearly labelled, to show you where everything is placed.
 - This is the side where the components sit.
 file:img/Build02.jpg
@@ -137,13 +137,15 @@ file:img/Build09.jpg
 - Next take your lengths of single-core wire and strip off the insulating plastic as shown below.
 file:img/Build10.jpg
 - Now solder the wire into the board as shown.
-file:img/Build11.jpg
+[[./img/Wireforbattery.jpg]]
+[[./img/Wiresoldered.jpg]]
+- *Make sure the positive  wire comes from the top of the board and the negative comes from the bottom.*
 - Next, use a screw driver to coil the bare wire.
-file:img/Build12.jpg
+[[./img/Twisting wire.jpg]]
 - Our last component is the PTM switch. Use masking tape to keep it in place.
-file:img/Build13.jpg
+[[./img/Soldercomplete.jpg]]
 - Then solder it into the board.
-file:img/Build14.jpg
+[[./img/Solderjoints.jpg]]
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
