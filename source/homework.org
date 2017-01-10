@@ -1,0 +1,129 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil 
+#+TITLE: The LED Torch - Assembling the Housing
+#+AUTHOR: Paul Dougall
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/stsb11/7-SC-Torch">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="../index.html">Back to Index</a>
+        </div>
+    </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+#+BEGIN_HTML
+<object data="js/LED.html" width='800px' height='500px'></object>
+#+END_HTML
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+<object data="js/Ohms_Law.html" width='400px' height='200px'></object>
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Homework Tasks
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Measure It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Click [[https://www.bournetoinvent.com/projects/7-SC-Torch/pages/Extension.html][here]] and read all about the Vernier Calliper.
+- Briefly explain what they are and how we use them.
+- Upload your work to www.bournetolearn.com badge 1.
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- The LED is a very efficient component in converting electrical energy to light energy. 
+- In the past we used incandescent bulb and then florescent tubes/bulbs to produce light. Do some research into each bulb, find out the circuit symbol for each, give a brief description on how they work and find out how much energy each bulb used to light a standard room. 
+- Upload your work to www.bournetolearn.com badge 2.
+
+** Calculate It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+- Complete the following table of resistor colour codes:
+
+
+    |First|Second|Third|Tolerance | Value|
+    |Red| Red| Orange| Gold|   |
+    |Orange| Yellow| Red| Silver|  |
+    |Violet| Grey| Yellow| Gold|  |
+    |Brown| Black| Black| Gold|  |
+    |Red| Green| Brown| Gold|  |
+    |Yellow| Red |Red |Gold|  |  
+
+
+- Calculate the voltage for following:
+
+a. A circuit which has the current (I) of 0.02A with the resistance of 200Ω
+
+b. A circuit which has the current (I) of 40mA with the resistance of 1kΩ
+
+- Upload your work to www.bournetolearn.com badge 3.
