@@ -46,3 +46,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
+* [[file:pages/homework.html][Homework Tasks]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
